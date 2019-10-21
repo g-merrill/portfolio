@@ -8,7 +8,7 @@ class App extends React.Component {
 {/* <!-- Icon Bar (Sidebar - hidden on small screens) --> */}
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   {/* <!-- Avatar image in top left corner --> */}
-  <img src="/w3images/avatar_smoke.jpg" alt="smoke" style={{ width: '100%' }} />
+  <img src="https://i.imgur.com/Sj59xHV.jpg" alt="smoke" style={{ width: '100%' }} />
   <a href="/portfolio" class="w3-bar-item w3-button w3-padding-large w3-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
@@ -17,7 +17,7 @@ class App extends React.Component {
     <i class="fa fa-user w3-xxlarge"></i>
     <p>ABOUT</p>
   </a>
-  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="#projects" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-eye w3-xxlarge"></i>
     <p>PROJECTS</p>
   </a>
@@ -32,7 +32,7 @@ class App extends React.Component {
   <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
     <a href="/portfolio" class="w3-bar-item w3-button" style={{ width: '25% !important' }}>HOME</a>
     <a href="#about" class="w3-bar-item w3-button" style={{ width: '25% !important' }}>ABOUT</a>
-    <a href="#photos" class="w3-bar-item w3-button" style={{ width: '25% !important' }}>PROJECTS</a>
+    <a href="#projects" class="w3-bar-item w3-button" style={{ width: '25% !important' }}>PROJECTS</a>
     <a href="#contact" class="w3-bar-item w3-button" style={{ width: '25% !important' }}>CONTACT</a>
   </div>
 </div>
@@ -43,111 +43,73 @@ class App extends React.Component {
   <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
     <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Greg Merrill</h1>
     <p>Software Engineer</p>
-    <img src="/w3images/man_smoke.jpg" alt="boy" class="w3-image" width="992" height="1108" />
+    <img src="https://i.imgur.com/UN2oD55.jpg" alt="boy" class="w3-image" style={{ width: '400px' }} />
   </header>
 
   {/* <!-- About Section --> */}
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
     <h2 class="w3-text-light-grey">About Me</h2>
     <hr style={{ width: '200px' }} class="w3-opacity" />
-    <p>Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
-      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <p>
+      Hi there!  Thanks for checking out my portfolio.  Born and raised in Bakersfield, CA 
+      to a big family of seven, I moved to Texas after high school to venture out on my 
+      own and to pursue a dream of becoming an engineer.
+    </p>
+    <p>
+      Little did I know that it would 
+      take me four years of mechanical engineering in college and four years of forensic 
+      engineering in the work field to realize that... I should be doing something else.
+      Enter General Assembly and their Software Engineering Immersive.  In just twelve short
+      week, I've discovered a newfound love for coding and all that software development
+      entails.  Armed with only a laptop, I discovered a skillset where I can build, I can 
+      explore, I can collaborate with other creative minds, and I can constantly learn new things in this ever-evolving industry!  
+    </p>
+    <p>
+      In terms of my current capabilities: my favorite languages to work in are JavaScript (so versatile) and Python (so clean), 
+      and I'm really enjoying the scalability and reusable components of React!
     </p>
     <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
-    <p class="w3-wide">Photography</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style={{ height: '28px', width: '95%' }}></div>
-    </div>
-    <p class="w3-wide">Web Design</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style={{ height: '28px', width: '85%' }}></div>
-    </div>
-    <p class="w3-wide">Photoshop</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style={{ height: '28px', width: '80%' }}></div>
-    </div><br/>
-    
-    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">11+</span><br/>
-        Partners
+    <ul class="w3-wide w3-ul">
+      <h5>Languages and Frameworks</h5>
+      <div class="w3-third">
+        <li class="w3-li">JavaScript</li>
+        <li class="w3-li">React</li>
+        <li class="w3-li">Python 3</li>
       </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">55+</span><br/>
-        Projects Done
+      <div class="w3-third">
+        <li class="w3-li">HTML5</li>
+        <li class="w3-li">CSS3</li>
+        <li class="w3-li">jQuery</li>
       </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">89+</span><br/>
-        Happy Clients
+      <div class="w3-third">
+        <li class="w3-li">Bootstrap</li>
+        <li class="w3-li">Materialize</li>
+        <li class="w3-li">Visual Studio Code</li>
       </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">150+</span><br/>
-        Meetings
-      </div>
-    </div>
+    </ul>
+    <ul class="w3-wide">Server-Side and Database
+      <li></li>
+    </ul>
+    <ul class="w3-wide">Version Control and Workflow Management
+      <li></li>
+    </ul>
+    <ul class="w3-wide">Methodologies
+      <li></li>
+    </ul>
+    <br/>
 
     <button class="w3-button w3-light-grey w3-padding-large w3-section">
       <i class="fa fa-download"></i> Download Resume
     </button>
-    
-    {/* <!-- Grid for pricing tables --> */}
-    <h3 class="w3-padding-16 w3-text-light-grey">My Price</h3>
-    <div class="w3-row-padding" style={{ margin: '0 -16px' }}>
-      <div class="w3-half w3-margin-bottom">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
-          <li class="w3-padding-16">Web Design</li>
-          <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">5GB Storage</li>
-          <li class="w3-padding-16">Mail Support</li>
-          <li class="w3-padding-16">
-            <h2>$ 10</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-
-      <div class="w3-half">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Pro</li>
-          <li class="w3-padding-16">Web Design</li>
-          <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">50GB Storage</li>
-          <li class="w3-padding-16">Endless Support</li>
-          <li class="w3-padding-16">
-            <h2>$ 25</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-    {/* <!-- End Grid/Pricing tables --> */}
-    </div>
-    
-    {/* <!-- Testimonials --> */}
-    <h3 class="w3-padding-24 w3-text-light-grey">My Reputation</h3>  
-    <img src="/w3images/bandmember.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style={{ width: '80px' }} />
-    <p><span class="w3-large w3-margin-right">Chris Fox.</span> CEO at Mighty Schools.</p>
-    <p>Jane Doe saved us from a web disaster.</p><br/>
-    
-    <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style={{ width: '80px' }} />
-    <p><span class="w3-large w3-margin-right">Rebecca Flex.</span> CEO at Company.</p>
-    <p>No one is better than Jane Doe.</p>
-  {/* <!-- End About Section --> */}
   </div>
   
   {/* <!-- Portfolio Section --> */}
-  <div class="w3-padding-64 w3-content" id="photos">
-    <h2 class="w3-text-light-grey">My Photos</h2>
+  <div class="w3-padding-64 w3-content" id="projects">
+    <h2 class="w3-text-light-grey">My Projects</h2>
     <hr style={{ width: '200px' }} class="w3-opacity" />
 
-    {/* <!-- Grid for photos --> */}
+    {/* <!-- Grid for projects --> */}
+    {/* Use Screenshots from the projects as clickable links to project details */}
     <div class="w3-row-padding" style={{ margin: '0 -16px' }}>
       <div class="w3-half">
         <img src="/w3images/wedding.jpg" alt='wedding' style={{ width: '100%' }} />
@@ -161,7 +123,7 @@ class App extends React.Component {
         <img src="/w3images/wedding.jpg" alt='wedding' style={{ width: '100%' }} />
         <img src="/w3images/p6.jpg" alt='p6' style={{ width: '100%' }} />
       </div>
-    {/* <!-- End photo grid --> */}
+    {/* <!-- End project grid --> */}
     </div>
   {/* <!-- End Portfolio Section --> */}
   </div>
@@ -172,9 +134,9 @@ class App extends React.Component {
     <hr style={{ width: '200px' }} class="w3-opacity" />
 
     <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Chicago, US</p>
-      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
-      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> San Francisco, US</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: &nbsp; 510 210 7036</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: &nbsp; gmerrill03@gmail.com</p>
     </div><br/>
     <p>Lets get in touch. Send me a message:</p>
 
@@ -194,12 +156,11 @@ class App extends React.Component {
   
     {/* <!-- Footer --> */}
   <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-github w3-hover-opacity"></i>
+    &nbsp;&nbsp;&nbsp;
     <i class="fa fa-linkedin w3-hover-opacity"></i>
+    &nbsp;&nbsp;&nbsp;
+    <i class="fa fa-certificate w3-hover-opacity"></i>
     <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" rel='noopener noreferrer' class="w3-hover-text-green">w3.css</a></p>
   {/* <!-- End footer --> */}
   </footer>
