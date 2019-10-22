@@ -75,18 +75,18 @@ class App extends React.Component {
         <li class="w3-li"></li>
         <li class="w3-li">JavaScript</li>
         <li class="w3-li">React</li>
-        <li class="w3-li">Python 3</li>
+        <li class="w3-li add-bord-bot">Python 3</li>
         <li class="w3-li hide-li"></li>
       </div>
       <div class="w3-third">
-        <li class="w3-li"></li>
+        <li class="w3-li hide-li"></li>
         <li class="w3-li">HTML5</li>
         <li class="w3-li">CSS3</li>
-        <li class="w3-li">jQuery</li>
+        <li class="w3-li add-bord-bot">jQuery</li>
         <li class="w3-li hide-li"></li>
       </div>
       <div class="w3-third">
-        <li class="w3-li"></li>
+        <li class="w3-li hide-li"></li>
         <li class="w3-li">Bootstrap</li>
         <li class="w3-li">Materialize</li>
         <li class="w3-li">VS Code</li>
@@ -94,17 +94,17 @@ class App extends React.Component {
       </div>
     </ul>
     <ul class="w3-wide w3-ul">
-      <h5>Server-Side and Database</h5>
+      <h5 class="w3-col">Server-Side and Database</h5>
       <div class="w3-half">
         <li class="w3-li"></li>
         <li class="w3-li">Express</li>
         <li class="w3-li">PostgreSQL</li>
         <li class="w3-li">Mongoose</li>
-        <li class="w3-li">MongoDB</li>
+        <li class="w3-li add-bord-bot">MongoDB</li>
         <li class="w3-li hide-li"></li>
       </div>
       <div class="w3-half">
-        <li class="w3-li"></li>
+        <li class="w3-li hide-li"></li>
         <li class="w3-li">OAuth</li>
         <li class="w3-li">Passport</li>
         <li class="w3-li">Amazon S3</li>
@@ -113,40 +113,40 @@ class App extends React.Component {
       </div>
     </ul>
     <ul class="w3-wide w3-ul">
-      <h5>Version Control and Workflow Management</h5>
+      <h5 class="w3-col">Version Control and Workflow Management</h5>
       <div class="w3-half">
         <li class="w3-li"></li>
         <li class="w3-li">Git</li>
         <li class="w3-li">GitHub</li>
-        <li class="w3-li">Command Line</li>
+        <li class="w3-li add-bord-bot">Command Line</li>
         <li class="w3-li hide-li"></li>
       </div>
       <div class="w3-half">
-        <li class="w3-li"></li>
+        <li class="w3-li hide-li"></li>
         <li class="w3-li">Trello</li>
         <li class="w3-li">InVision</li>
-        <li class="w3-li">&nbsp;</li>
-        <li class="w3-li hide-li"></li>
+        <li class="w3-li hide-li">&nbsp;</li>
+        <li class="w3-li"></li>
       </div>
     </ul>
     <ul class="w3-wide w3-ul">
-      <h5>Methodologies</h5>
+      <h5 class="w3-col">Methodologies</h5>
       <div class="w3-half">
         <li class="w3-li"></li>
         <li class="w3-li">ERDs</li>
         <li class="w3-li">MVC Pattern</li>
-        <li class="w3-li">Object-Oriented Programming</li>
+        <li class="w3-li add-bord-bot">Object-Oriented Programming</li>
       </div>
       <div class="w3-half">
         <li class="w3-li hide-li"></li>
         <li class="w3-li">Wireframing</li>
         <li class="w3-li">User Stories</li>
-        <li class="w3-li">Responsive Design</li>
+        <li class="w3-li add-bord-bot">Responsive Design</li>
       </div>
     </ul>
-    <br/>
-
-    <button class="w3-button w3-light-grey w3-padding-large w3-section">
+    <div class='w3-col' />
+    <div class='w3-bar-block'></div>
+    <button class="w3-button w3-light-grey w3-padding-large  w3-section">
       <i class="fa fa-download"></i> Download Resume
     </button>
   </div>
