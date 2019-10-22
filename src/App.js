@@ -61,11 +61,11 @@ class App extends React.Component {
       engineering in the work field to realize that... I should be doing something else.
       Enter General Assembly and their Software Engineering Immersive.  In just twelve short
       weeks, I've discovered a newfound love for coding and all that software development
-      entails.  Armed with only a laptop, I discovered a skillset where I can build, I can 
-      explore, I can collaborate with other creative minds, and I can constantly learn new things in this ever-evolving industry!  
+      entails.  Armed with only a laptop, I have begun to build a skillset where I can create,
+      explore, collaborate with other creative minds, and constantly learn new things in this exciting and ever-evolving industry!  
     </p>
     <p>
-      In terms of my current capabilities: my favorite languages to work in are JavaScript (so versatile) and Python (so clean), 
+      In terms of my current capabilities: my favorite languages are JavaScript (so versatile) and Python (so clean), 
       and I'm really enjoying the scalability and reusable components of React!
     </p>
     <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
@@ -135,16 +135,16 @@ class App extends React.Component {
         <li class="w3-li"></li>
         <li class="w3-li">ERDs</li>
         <li class="w3-li">MVC Pattern</li>
-        <li class="w3-li add-bord-bot">Object-Oriented Programming</li>
+        <li class="w3-li mobile-bord-bot">Object-Oriented Programming</li>
       </div>
       <div class="w3-half">
         <li class="w3-li hide-li"></li>
         <li class="w3-li">Wireframing</li>
         <li class="w3-li">User Stories</li>
-        <li class="w3-li add-bord-bot">Responsive Design</li>
+        <li class="w3-li">Responsive Design</li>
       </div>
     </ul>
-    <div class='w3-col' />
+    <div class='w3-col add-bord-top' />
     <div class='w3-bar-block'></div>
     <button class="w3-button w3-light-grey w3-padding-large  w3-section">
       <i class="fa fa-download"></i> Download Resume
