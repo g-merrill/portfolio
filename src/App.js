@@ -60,7 +60,7 @@ class App extends React.Component {
       take me four years of mechanical engineering in college and four years of forensic 
       engineering in the work field to realize that... I should be doing something else.
       Enter General Assembly and their Software Engineering Immersive.  In just twelve short
-      week, I've discovered a newfound love for coding and all that software development
+      weeks, I've discovered a newfound love for coding and all that software development
       entails.  Armed with only a laptop, I discovered a skillset where I can build, I can 
       explore, I can collaborate with other creative minds, and I can constantly learn new things in this ever-evolving industry!  
     </p>
@@ -72,29 +72,77 @@ class App extends React.Component {
     <ul class="w3-wide w3-ul">
       <h5>Languages and Frameworks</h5>
       <div class="w3-third">
+        <li class="w3-li"></li>
         <li class="w3-li">JavaScript</li>
         <li class="w3-li">React</li>
         <li class="w3-li">Python 3</li>
+        <li class="w3-li"></li>
       </div>
       <div class="w3-third">
+        <li class="w3-li"></li>
         <li class="w3-li">HTML5</li>
         <li class="w3-li">CSS3</li>
         <li class="w3-li">jQuery</li>
+        <li class="w3-li"></li>
       </div>
       <div class="w3-third">
+        <li class="w3-li"></li>
         <li class="w3-li">Bootstrap</li>
         <li class="w3-li">Materialize</li>
-        <li class="w3-li">Visual Studio Code</li>
+        <li class="w3-li">VS Code</li>
+        <li class="w3-li"></li>
       </div>
     </ul>
-    <ul class="w3-wide">Server-Side and Database
-      <li></li>
+    <ul class="w3-wide w3-ul">
+      <h5>Server-Side and Database</h5>
+      <div class="w3-half">
+        <li class="w3-li"></li>
+        <li class="w3-li">Express</li>
+        <li class="w3-li">PostgreSQL</li>
+        <li class="w3-li">Mongoose</li>
+        <li class="w3-li">MongoDB</li>
+        <li class="w3-li"></li>
+      </div>
+      <div class="w3-half">
+        <li class="w3-li"></li>
+        <li class="w3-li">OAuth</li>
+        <li class="w3-li">Passport</li>
+        <li class="w3-li">Amazon S3</li>
+        <li class="w3-li">&nbsp;</li>
+        <li class="w3-li"></li>
+      </div>
     </ul>
-    <ul class="w3-wide">Version Control and Workflow Management
-      <li></li>
+    <ul class="w3-wide w3-ul">
+      <h5>Version Control and Workflow Management</h5>
+      <div class="w3-half">
+        <li class="w3-li"></li>
+        <li class="w3-li">Git</li>
+        <li class="w3-li">GitHub</li>
+        <li class="w3-li">Command Line</li>
+        <li class="w3-li"></li>
+      </div>
+      <div class="w3-half">
+        <li class="w3-li"></li>
+        <li class="w3-li">Trello</li>
+        <li class="w3-li">InVision</li>
+        <li class="w3-li">&nbsp;</li>
+        <li class="w3-li"></li>
+      </div>
     </ul>
-    <ul class="w3-wide">Methodologies
-      <li></li>
+    <ul class="w3-wide w3-ul">
+      <h5>Methodologies</h5>
+      <div class="w3-half">
+        <li class="w3-li"></li>
+        <li class="w3-li">ERDs</li>
+        <li class="w3-li">MVC Pattern</li>
+        <li class="w3-li">Object-Oriented Programming</li>
+      </div>
+      <div class="w3-half">
+        <li class="w3-li"></li>
+        <li class="w3-li">Wireframing</li>
+        <li class="w3-li">User Stories</li>
+        <li class="w3-li">Responsive Design</li>
+      </div>
     </ul>
     <br/>
 
