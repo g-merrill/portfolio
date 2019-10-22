@@ -76,14 +76,14 @@ class App extends React.Component {
         <li class="w3-li">JavaScript</li>
         <li class="w3-li">React</li>
         <li class="w3-li">Python 3</li>
-        <li class="w3-li"></li>
+        <li class="w3-li hide-li"></li>
       </div>
       <div class="w3-third">
         <li class="w3-li"></li>
         <li class="w3-li">HTML5</li>
         <li class="w3-li">CSS3</li>
         <li class="w3-li">jQuery</li>
-        <li class="w3-li"></li>
+        <li class="w3-li hide-li"></li>
       </div>
       <div class="w3-third">
         <li class="w3-li"></li>
@@ -101,14 +101,14 @@ class App extends React.Component {
         <li class="w3-li">PostgreSQL</li>
         <li class="w3-li">Mongoose</li>
         <li class="w3-li">MongoDB</li>
-        <li class="w3-li"></li>
+        <li class="w3-li hide-li"></li>
       </div>
       <div class="w3-half">
         <li class="w3-li"></li>
         <li class="w3-li">OAuth</li>
         <li class="w3-li">Passport</li>
         <li class="w3-li">Amazon S3</li>
-        <li class="w3-li">&nbsp;</li>
+        <li class="w3-li hide-li">&nbsp;</li>
         <li class="w3-li"></li>
       </div>
     </ul>
@@ -119,14 +119,14 @@ class App extends React.Component {
         <li class="w3-li">Git</li>
         <li class="w3-li">GitHub</li>
         <li class="w3-li">Command Line</li>
-        <li class="w3-li"></li>
+        <li class="w3-li hide-li"></li>
       </div>
       <div class="w3-half">
         <li class="w3-li"></li>
         <li class="w3-li">Trello</li>
         <li class="w3-li">InVision</li>
         <li class="w3-li">&nbsp;</li>
-        <li class="w3-li"></li>
+        <li class="w3-li hide-li"></li>
       </div>
     </ul>
     <ul class="w3-wide w3-ul">
@@ -138,7 +138,7 @@ class App extends React.Component {
         <li class="w3-li">Object-Oriented Programming</li>
       </div>
       <div class="w3-half">
-        <li class="w3-li"></li>
+        <li class="w3-li hide-li"></li>
         <li class="w3-li">Wireframing</li>
         <li class="w3-li">User Stories</li>
         <li class="w3-li">Responsive Design</li>
