@@ -101,7 +101,7 @@ class App extends React.Component {
       explore, collaborate with other creative minds, and constantly learn new things in this exciting and ever-evolving industry!  
     </p>
     <p>
-      In terms of my current capabilities: my favorite languages are JavaScript (so versatile) and Python (so clean), 
+      In terms of my current interests: my favorite languages are JavaScript (so versatile) and Python (so clean), 
       and I'm really enjoying the scalability and reusable components of React!
     </p>
     <h3 className="w3-padding-16 w3-text-light-grey">My Skills</h3>
@@ -116,9 +116,9 @@ class App extends React.Component {
       </div>
       <div className="w3-third">
         <li className="w3-li gray-bord-bot hide-li"></li>
+        <li className="w3-li w3-text-white add-bord-bot">Node.js</li>
         <li className="w3-li w3-text-white gray-bord-bot">HTML5</li>
         <li className="w3-li w3-text-white gray-bord-bot">CSS3</li>
-        <li className="w3-li w3-text-white add-bord-bot">jQuery</li>
         <li className="w3-li hide-li"></li>
       </div>
       <div className="w3-third">
@@ -144,7 +144,7 @@ class App extends React.Component {
         <li className="w3-li w3-text-white gray-bord-bot">OAuth</li>
         <li className="w3-li w3-text-white gray-bord-bot">Passport</li>
         <li className="w3-li w3-text-white gray-bord-bot">Amazon S3</li>
-        <li className="w3-li gray-bord-bot hide-li">&nbsp;</li>
+        <li className="w3-li w3-text-white gray-bord-bot">Heroku</li>
         <li className="w3-li gray-bord-bot"></li>
       </div>
     </ul>
@@ -161,7 +161,7 @@ class App extends React.Component {
         <li className="w3-li gray-bord-bot hide-li"></li>
         <li className="w3-li w3-text-white gray-bord-bot">Trello</li>
         <li className="w3-li w3-text-white gray-bord-bot">InVision</li>
-        <li className="w3-li gray-bord-bot hide-li">&nbsp;</li>
+        <li className="w3-li w3-text-white gray-bord-bot">Figma</li>
         <li className="w3-li gray-bord-bot"></li>
       </div>
     </ul>
@@ -185,7 +185,7 @@ class App extends React.Component {
     <button className="w3-button w3-light-grey w3-padding-large  w3-section">
       <i className="fa fa-download" />
       &nbsp;
-      <Link to="/files/Resume_10_17_2019.pdf" target="_blank" download>Download Resume</Link>
+      <Link to="/files/Gregory_Merrill_Resume.pdf" target="_blank" download>Download Resume</Link>
     </button>
   </div>
   
@@ -198,28 +198,27 @@ class App extends React.Component {
     {/* Use Screenshots from the projects as clickable links to project details */}
     <div className="w3-row-padding" style={{ margin: '0 -16px' }}>
       <div className="w3-half">
-        <a target='_blank' rel='noopener noreferrer' href='https://g-merrill.github.io/minesweeper/'>
-          <img src="https://i.imgur.com/2TPxzNq.png" alt='minesweeper' style={{ width: '100%' }} />
-        </a>
-        <div className='w3-center'>
-          <a target='_blank' rel="noopener noreferrer" href='https://github.com/g-merrill/minesweeper'>
-            <i className="fa fa-github w3-hover-opacity w3-xxlarge" />
+        <div style={{ height: '200px !important' }}>
+          <a target='_blank' rel='noopener noreferrer' href='https://g-merrill.github.io/minesweeper/'>
+            <img src="https://i.imgur.com/2TPxzNq.png" alt='minesweeper' style={{ width: '100%' }} />
           </a>
+          <div className='w3-center'>
+            <a target='_blank' rel="noopener noreferrer" href='https://github.com/g-merrill/minesweeper'>
+              <i className="fa fa-github w3-hover-opacity w3-xxlarge" />
+            </a>
+          </div>
         </div>
-        <div className='w3-col'>
-          &nbsp;
-        </div>
-        <a target='_blank' rel='noopener noreferrer' href='https://trucksfinder.herokuapp.com/'>
-          <img src="https://i.imgur.com/v5ZeNkw.png" alt='trucksfinder' style={{ width: '100%' }} />
-        </a>
-        <div className='w3-center'>
-          <a target='_blank' rel="noopener noreferrer" href='https://github.com/g-merrill/truckSFinder'>
-            <i className="fa fa-github w3-hover-opacity w3-xxlarge" />
+        <div style={{ height: '200px' }}>
+          <a target='_blank' rel='noopener noreferrer' href='https://trucksfinder.herokuapp.com/'>
+            <img src="https://i.imgur.com/v5ZeNkw.png" alt='trucksfinder' style={{ width: '100%' }} />
           </a>
+          <div className='w3-center'>
+            <a target='_blank' rel="noopener noreferrer" href='https://github.com/g-merrill/truckSFinder'>
+              <i className="fa fa-github w3-hover-opacity w3-xxlarge" />
+            </a>
+          </div>
         </div>
-        <div className='w3-col'>
-          &nbsp;
-        </div>
+
       </div>
 
       <div className="w3-half">
