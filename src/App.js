@@ -1,55 +1,91 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './App.css';
 
 class App extends React.Component {
+
+  state = {
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  };
+
+
+  handleChange = evt => {
+    this.setState({
+      [evt.target.name]: evt.target.value
+    });
+  }
+
+  handleSubmit = async evt => {
+    evt.preventDefault();
+    const templateId = 'template_zorBb3zy';
+    await this.sendFeedback(templateId, {subject_html: this.state.subject, message_html: this.state.message, from_name: this.state.name, reply_to: this.state.email});
+    this.setState({ name: '', email: '', subject: '', message: '' });
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('subject').value = '';
+    document.getElementById('message').value = '';
+  }
+  
+  sendFeedback (templateId, variables) {
+    window.emailjs.send( 'gmail', templateId, variables )
+    .then(res => {
+      console.log('Email successfully sent!')
+    })
+    // Handle errors here however you like, or use a React error boundary
+    .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err));
+  }
+
   render() {
     return (
       <>
 {/* <!-- Icon Bar (Sidebar - hidden on small screens) --> */}
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+<nav className="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   {/* <!-- Avatar image in top left corner --> */}
   <img src="https://i.imgur.com/Sj59xHV.jpg" alt="smoke" style={{ width: '100%' }} />
-  <a href="/portfolio" class="w3-bar-item w3-button w3-padding-large w3-black">
-    <i class="fa fa-home w3-xxlarge"></i>
+  <a href="/portfolio" className="w3-bar-item w3-button w3-padding-large w3-black">
+    <i className="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-user w3-xxlarge"></i>
+  <a href="#about" className="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i className="fa fa-user w3-xxlarge"></i>
     <p>ABOUT</p>
   </a>
-  <a href="#projects" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-eye w3-xxlarge"></i>
+  <a href="#projects" className="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i className="fa fa-eye w3-xxlarge"></i>
     <p>PROJECTS</p>
   </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-envelope w3-xxlarge"></i>
+  <a href="#contact" className="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i className="fa fa-envelope w3-xxlarge"></i>
     <p>CONTACT</p>
   </a>
 </nav>
 
 {/* <!-- Navbar on small screens (Hidden on medium and large screens) --> */}
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="/portfolio" class="w3-bar-item w3-button" style={{ width: '25% !important' }}>HOME</a>
-    <a href="#about" class="w3-bar-item w3-button" style={{ width: '25% !important' }}>ABOUT</a>
-    <a href="#projects" class="w3-bar-item w3-button" style={{ width: '25% !important' }}>PROJECTS</a>
-    <a href="#contact" class="w3-bar-item w3-button" style={{ width: '25% !important' }}>CONTACT</a>
+<div className="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div className="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="/portfolio" className="w3-bar-item w3-button" style={{ width: '25% !important' }}>HOME</a>
+    <a href="#about" className="w3-bar-item w3-button" style={{ width: '25% !important' }}>ABOUT</a>
+    <a href="#projects" className="w3-bar-item w3-button" style={{ width: '25% !important' }}>PROJECTS</a>
+    <a href="#contact" className="w3-bar-item w3-button" style={{ width: '25% !important' }}>CONTACT</a>
   </div>
 </div>
 
 {/* <!-- Page Content --> */}
-<div class="w3-padding-large" id="main">
+<div className="w3-padding-large" id="main">
   {/* <!-- Header/Home --> */}
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Greg Merrill</h1>
+  <header className="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 className="w3-jumbo"><span className="w3-hide-small">I'm</span> Greg Merrill</h1>
     <p>Software Engineer</p>
-    <img src="https://i.imgur.com/UN2oD55.jpg" alt="boy" class="w3-image" style={{ width: '400px' }} />
+    <img src="https://i.imgur.com/UN2oD55.jpg" alt="boy" className="w3-image" style={{ width: '400px' }} />
   </header>
 
   {/* <!-- About Section --> */}
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">About Me</h2>
-    <hr style={{ width: '200px' }} class="w3-opacity" />
+  <div className="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 className="w3-text-light-grey">About Me</h2>
+    <hr style={{ width: '200px' }} className="w3-opacity" />
     <p>
       Hi there!  Thanks for checking out my portfolio.  Born and raised in Bakersfield, CA 
       to a big family of seven, I moved to Texas after high school to venture out on my 
@@ -68,108 +104,147 @@ class App extends React.Component {
       In terms of my current capabilities: my favorite languages are JavaScript (so versatile) and Python (so clean), 
       and I'm really enjoying the scalability and reusable components of React!
     </p>
-    <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
-    <ul class="w3-wide w3-ul">
+    <h3 className="w3-padding-16 w3-text-light-grey">My Skills</h3>
+    <ul className="w3-wide w3-ul">
       <h5>Languages and Frameworks</h5>
-      <div class="w3-third">
-        <li class="w3-li"></li>
-        <li class="w3-li">JavaScript</li>
-        <li class="w3-li">React</li>
-        <li class="w3-li add-bord-bot">Python 3</li>
-        <li class="w3-li hide-li"></li>
+      <div className="w3-third">
+        <li className="w3-li gray-bord-bot"></li>
+        <li className="w3-li w3-text-white gray-bord-bot">JavaScript</li>
+        <li className="w3-li w3-text-white gray-bord-bot">React</li>
+        <li className="w3-li w3-text-white add-bord-bot">Python 3</li>
+        <li className="w3-li hide-li"></li>
       </div>
-      <div class="w3-third">
-        <li class="w3-li hide-li"></li>
-        <li class="w3-li">HTML5</li>
-        <li class="w3-li">CSS3</li>
-        <li class="w3-li add-bord-bot">jQuery</li>
-        <li class="w3-li hide-li"></li>
+      <div className="w3-third">
+        <li className="w3-li gray-bord-bot hide-li"></li>
+        <li className="w3-li w3-text-white gray-bord-bot">HTML5</li>
+        <li className="w3-li w3-text-white gray-bord-bot">CSS3</li>
+        <li className="w3-li w3-text-white add-bord-bot">jQuery</li>
+        <li className="w3-li hide-li"></li>
       </div>
-      <div class="w3-third">
-        <li class="w3-li hide-li"></li>
-        <li class="w3-li">Bootstrap</li>
-        <li class="w3-li">Materialize</li>
-        <li class="w3-li">VS Code</li>
-        <li class="w3-li"></li>
-      </div>
-    </ul>
-    <ul class="w3-wide w3-ul">
-      <h5 class="w3-col">Server-Side and Database</h5>
-      <div class="w3-half">
-        <li class="w3-li"></li>
-        <li class="w3-li">Express</li>
-        <li class="w3-li">PostgreSQL</li>
-        <li class="w3-li">Mongoose</li>
-        <li class="w3-li add-bord-bot">MongoDB</li>
-        <li class="w3-li hide-li"></li>
-      </div>
-      <div class="w3-half">
-        <li class="w3-li hide-li"></li>
-        <li class="w3-li">OAuth</li>
-        <li class="w3-li">Passport</li>
-        <li class="w3-li">Amazon S3</li>
-        <li class="w3-li hide-li">&nbsp;</li>
-        <li class="w3-li"></li>
+      <div className="w3-third">
+        <li className="w3-li gray-bord-bot hide-li"></li>
+        <li className="w3-li w3-text-white gray-bord-bot">Bootstrap</li>
+        <li className="w3-li w3-text-white gray-bord-bot">Materialize</li>
+        <li className="w3-li w3-text-white gray-bord-bot">VS Code</li>
+        <li className="w3-li gray-bord-bot"></li>
       </div>
     </ul>
-    <ul class="w3-wide w3-ul">
-      <h5 class="w3-col">Version Control and Workflow Management</h5>
-      <div class="w3-half">
-        <li class="w3-li"></li>
-        <li class="w3-li">Git</li>
-        <li class="w3-li">GitHub</li>
-        <li class="w3-li add-bord-bot">Command Line</li>
-        <li class="w3-li hide-li"></li>
+    <ul className="w3-wide w3-ul">
+      <h5 className="w3-col">Server-Side and Database</h5>
+      <div className="w3-half">
+        <li className="w3-li gray-bord-bot"></li>
+        <li className="w3-li w3-text-white gray-bord-bot">Express</li>
+        <li className="w3-li w3-text-white gray-bord-bot">PostgreSQL</li>
+        <li className="w3-li w3-text-white gray-bord-bot">Mongoose</li>
+        <li className="w3-li w3-text-white add-bord-bot">MongoDB</li>
+        <li className="w3-li hide-li"></li>
       </div>
-      <div class="w3-half">
-        <li class="w3-li hide-li"></li>
-        <li class="w3-li">Trello</li>
-        <li class="w3-li">InVision</li>
-        <li class="w3-li hide-li">&nbsp;</li>
-        <li class="w3-li"></li>
-      </div>
-    </ul>
-    <ul class="w3-wide w3-ul">
-      <h5 class="w3-col">Methodologies</h5>
-      <div class="w3-half">
-        <li class="w3-li"></li>
-        <li class="w3-li">ERDs</li>
-        <li class="w3-li">MVC Pattern</li>
-        <li class="w3-li mobile-bord-bot">Object-Oriented Programming</li>
-      </div>
-      <div class="w3-half">
-        <li class="w3-li hide-li"></li>
-        <li class="w3-li">Wireframing</li>
-        <li class="w3-li">User Stories</li>
-        <li class="w3-li">Responsive Design</li>
+      <div className="w3-half">
+        <li className="w3-li gray-bord-bot hide-li"></li>
+        <li className="w3-li w3-text-white gray-bord-bot">OAuth</li>
+        <li className="w3-li w3-text-white gray-bord-bot">Passport</li>
+        <li className="w3-li w3-text-white gray-bord-bot">Amazon S3</li>
+        <li className="w3-li gray-bord-bot hide-li">&nbsp;</li>
+        <li className="w3-li gray-bord-bot"></li>
       </div>
     </ul>
-    <div class='w3-col add-bord-top' />
-    <div class='w3-bar-block'></div>
-    <button class="w3-button w3-light-grey w3-padding-large  w3-section">
-      <i class="fa fa-download"></i> Download Resume
+    <ul className="w3-wide w3-ul">
+      <h5 className="w3-col">Version Control and Workflow Management</h5>
+      <div className="w3-half">
+        <li className="w3-li gray-bord-bot"></li>
+        <li className="w3-li w3-text-white gray-bord-bot">Git</li>
+        <li className="w3-li w3-text-white gray-bord-bot">GitHub</li>
+        <li className="w3-li w3-text-white add-bord-bot">Command Line</li>
+        <li className="w3-li hide-li"></li>
+      </div>
+      <div className="w3-half">
+        <li className="w3-li gray-bord-bot hide-li"></li>
+        <li className="w3-li w3-text-white gray-bord-bot">Trello</li>
+        <li className="w3-li w3-text-white gray-bord-bot">InVision</li>
+        <li className="w3-li gray-bord-bot hide-li">&nbsp;</li>
+        <li className="w3-li gray-bord-bot"></li>
+      </div>
+    </ul>
+    <ul className="w3-wide w3-ul">
+      <h5 className="w3-col">Methodologies</h5>
+      <div className="w3-half">
+        <li className="w3-li gray-bord-bot"></li>
+        <li className="w3-li w3-text-white gray-bord-bot">ERDs</li>
+        <li className="w3-li w3-text-white gray-bord-bot">MVC Pattern</li>
+        <li className="w3-li w3-text-white mobile-bord-bot">Object-Oriented Programming</li>
+      </div>
+      <div className="w3-half">
+        <li className="w3-li gray-bord-bot hide-li"></li>
+        <li className="w3-li w3-text-white gray-bord-bot">Wireframing</li>
+        <li className="w3-li w3-text-white gray-bord-bot">User Stories</li>
+        <li className="w3-li w3-text-white gray-bord-bot">Responsive Design</li>
+      </div>
+    </ul>
+    <div className='w3-col add-bord-top' />
+    <div className='w3-bar-block'></div>
+    <button className="w3-button w3-light-grey w3-padding-large  w3-section">
+      <i className="fa fa-download" />
+      &nbsp;
+      <Link to="/files/Resume_10_17_2019.pdf" target="_blank" download>Download Resume</Link>
     </button>
   </div>
   
   {/* <!-- Portfolio Section --> */}
-  <div class="w3-padding-64 w3-content" id="projects">
-    <h2 class="w3-text-light-grey">My Projects</h2>
-    <hr style={{ width: '200px' }} class="w3-opacity" />
+  <div className="w3-padding-64 w3-content" id="projects">
+    <h2 className="w3-text-light-grey">My Projects</h2>
+    <hr style={{ width: '200px' }} className="w3-opacity" />
 
     {/* <!-- Grid for projects --> */}
     {/* Use Screenshots from the projects as clickable links to project details */}
-    <div class="w3-row-padding" style={{ margin: '0 -16px' }}>
-      <div class="w3-half">
-        <img src="/w3images/wedding.jpg" alt='wedding' style={{ width: '100%' }} />
-        <img src="/w3images/rocks.jpg" alt='rocks' style={{ width: '100%' }} />
-        <img src="/w3images/sailboat.jpg" alt='sailboat' style={{ width: '100%' }} />
+    <div className="w3-row-padding" style={{ margin: '0 -16px' }}>
+      <div className="w3-half">
+        <a target='_blank' rel='noopener noreferrer' href='https://g-merrill.github.io/minesweeper/'>
+          <img src="https://i.imgur.com/2TPxzNq.png" alt='minesweeper' style={{ width: '100%' }} />
+        </a>
+        <div className='w3-center'>
+          <a target='_blank' rel="noopener noreferrer" href='https://github.com/g-merrill/minesweeper'>
+            <i className="fa fa-github w3-hover-opacity w3-xxlarge" />
+          </a>
+        </div>
+        <div className='w3-col'>
+          &nbsp;
+        </div>
+        <a target='_blank' rel='noopener noreferrer' href='https://trucksfinder.herokuapp.com/'>
+          <img src="https://i.imgur.com/v5ZeNkw.png" alt='trucksfinder' style={{ width: '100%' }} />
+        </a>
+        <div className='w3-center'>
+          <a target='_blank' rel="noopener noreferrer" href='https://github.com/g-merrill/truckSFinder'>
+            <i className="fa fa-github w3-hover-opacity w3-xxlarge" />
+          </a>
+        </div>
+        <div className='w3-col'>
+          &nbsp;
+        </div>
       </div>
 
-      <div class="w3-half">
-        <img src="/w3images/underwater.jpg" alt='underwater' style={{ width: '100%' }} />
-        <img src="/w3images/chef.jpg" alt='chef' style={{ width: '100%' }} />
-        <img src="/w3images/wedding.jpg" alt='wedding' style={{ width: '100%' }} />
-        <img src="/w3images/p6.jpg" alt='p6' style={{ width: '100%' }} />
+      <div className="w3-half">
+        <a target='_blank' rel='noopener noreferrer' href='https://experiencesapp.herokuapp.com/'>
+          <img src="https://i.imgur.com/oWaG0jA.png" alt='experiences' style={{ width: '100%' }} />
+        </a>
+        <div className='w3-center'>
+          <a target='_blank' rel="noopener noreferrer" href='https://github.com/g-merrill/experiences-app'>
+            <i className="fa fa-github w3-hover-opacity w3-xxlarge" />
+          </a>
+        </div>
+        <div className='w3-col'>
+          &nbsp;
+        </div>
+        <a target='_blank' rel='noopener noreferrer' href='https://protest-now.herokuapp.com/'>
+          <img src="https://i.imgur.com/eb1Bzgb.png" alt='protestnow' style={{ width: '100%' }} />
+        </a>
+        <div className='w3-center'>
+          <a target='_blank' rel="noopener noreferrer" href='https://github.com/g-merrill/protestNOW'>
+            <i className="fa fa-github w3-hover-opacity w3-xxlarge" />
+          </a>
+        </div>
+        <div className='w3-col'>
+          &nbsp;
+        </div>
       </div>
     {/* <!-- End project grid --> */}
     </div>
@@ -177,25 +252,25 @@ class App extends React.Component {
   </div>
 
   {/* <!-- Contact Section --> */}
-  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-    <h2 class="w3-text-light-grey">Contact Me</h2>
-    <hr style={{ width: '200px' }} class="w3-opacity" />
+  <div className="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 className="w3-text-light-grey">Contact Me</h2>
+    <hr style={{ width: '200px' }} className="w3-opacity" />
 
-    <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> San Francisco, US</p>
-      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: &nbsp; 510 210 7036</p>
-      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: &nbsp; gmerrill03@gmail.com</p>
+    <div className="w3-section">
+      <p><i className="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> San Francisco, US</p>
+      <p><i className="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: &nbsp; 510 210 7036</p>
+      <p><i className="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: &nbsp; gmerrill03@gmail.com</p>
     </div><br/>
     <p>Lets get in touch. Send me a message:</p>
 
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name" /></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email" /></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject" /></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message" /></p>
+    <form onSubmit={this.handleSubmit}>
+      <p><input className="w3-input w3-padding-16" type="text" placeholder="Name" required id="name" name="name" onChange={this.handleChange} /></p>
+      <p><input className="w3-input w3-padding-16" type="text" placeholder="Email" required id="email" name="email" onChange={this.handleChange} /></p>
+      <p><input className="w3-input w3-padding-16" type="text" placeholder="Subject" required id="subject" name="subject" onChange={this.handleChange} /></p>
+      <p><input className="w3-input w3-padding-16" type="text" placeholder="Message" required id="message" name="message" onChange={this.handleChange} /></p>
       <p>
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        <button className="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i className="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
       </p>
     </form>
@@ -203,13 +278,25 @@ class App extends React.Component {
   </div>
   
     {/* <!-- Footer --> */}
-  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-    <i class="fa fa-github w3-hover-opacity"></i>
-    &nbsp;&nbsp;&nbsp;
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-    &nbsp;&nbsp;&nbsp;
-    <i class="fa fa-certificate w3-hover-opacity"></i>
-    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" rel='noopener noreferrer' class="w3-hover-text-green">w3.css</a></p>
+  <footer className="w3-content w3-padding-32 w3-text-grey w3-xlarge">
+    <div className='w3-col w3-margin-bottom'>
+      <div className='w3-third w3-center'>
+        <a target='_blank' rel="noopener noreferrer" href='https://github.com/g-merrill/'>
+          <i className="fa fa-github w3-hover-opacity w3-jumbo" />
+        </a>
+      </div>
+      <div className='w3-third w3-center'>
+        <a target='_blank' rel="noopener noreferrer" href='https://www.linkedin.com/in/g-merrill/'>
+          <i className="fa fa-linkedin w3-hover-opacity w3-jumbo" />
+        </a>
+      </div>
+      <div className='w3-third w3-center'>
+        <a target='_blank' rel="noopener noreferrer" href='https://profiles.generalassemb.ly/profiles'>
+          <i className="fa fa-certificate w3-hover-opacity w3-jumbo" />
+        </a>
+      </div>
+    </div>
+    <p className="w3-medium w3-margin-top w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" rel='noopener noreferrer' className="w3-hover-text-green">w3.css</a></p>
   {/* <!-- End footer --> */}
   </footer>
 
