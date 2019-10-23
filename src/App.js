@@ -185,7 +185,7 @@ class App extends React.Component {
     <button className="w3-button w3-light-grey w3-padding-large  w3-section">
       <i className="fa fa-download" />
       &nbsp;
-      <Link to="/files/Gregory_Merrill_Resume.pdf" target="_blank" download>Download Resume</Link>
+      <Link to="/portfolio/files/Gregory_Merrill_Resume.pdf" target="_blank" download>Download Resume</Link>
     </button>
   </div>
   
