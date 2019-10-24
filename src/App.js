@@ -70,11 +70,11 @@ class App extends React.Component {
 {/* <!-- Navbar on small screens (Hidden on medium and large screens) --> */}
 <div className="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
   <div className="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="/portfolio" className="w3-bar-item w3-button" style={{ width: '25% !important' }}>HOME</a>
-    <a href="#about" className="w3-bar-item w3-button" style={{ width: '25% !important' }}>ABOUT</a>
-    <a href="#skills" className="w3-bar-item w3-button" style={{ width: '25% !important' }}>SKILLS</a>
-    <a href="#projects" className="w3-bar-item w3-button" style={{ width: '25% !important' }}>PROJECTS</a>
-    <a href="#contact" className="w3-bar-item w3-button" style={{ width: '25% !important' }}>CONTACT</a>
+    <a href="/portfolio" className="w3-button mobile-nav-btn" style={{ width: '25% !important' }}>HOME</a>
+    <a href="#about" className="w3-button mobile-nav-btn" style={{ width: '25% !important' }}>ABOUT</a>
+    <a href="#skills" className="w3-button mobile-nav-btn" style={{ width: '25% !important' }}>SKILLS</a>
+    <a href="#projects" className="w3-button mobile-nav-btn" style={{ width: '25% !important' }}>PROJECTS</a>
+    <a href="#contact" className="w3-button mobile-nav-btn" style={{ width: '25% !important' }}>CONTACT</a>
   </div>
 </div>
 
@@ -208,7 +208,7 @@ class App extends React.Component {
       <div className="w3-half">
         <div className="project-card">
           <h5>Minesweeper</h5>
-          <img src="https://i.imgur.com/2TPxzNq.png" alt='minesweeper' style={{ width: '100%' }} />
+          <img src="https://i.imgur.com/2TPxzNq.png" alt='minesweeper' className="project-img" />
           <p>For SEI Project 1, I built my own version of the classic game, Minesweeper.</p>
           <p>The main technologies used for this project were: HTML, CSS, and JavaScript.</p>
           <div className="project-link-ctnr">
@@ -222,7 +222,7 @@ class App extends React.Component {
         </div>
         <div className="project-card">
           <h5>truckSFinder</h5>
-          <img src="https://i.imgur.com/v5ZeNkw.png" alt='trucksfinder' style={{ width: '100%' }} />
+          <img src="https://i.imgur.com/v5ZeNkw.png" alt='trucksfinder' className="project-img" />
           <p>For SEI Project 2, I collaborated with a UX design student to make an app focused on finding and reviewing local SF food trucks.</p>
           <p>The main technologies used for this project were: Node, Express, EJS, MongoDB, Mongoose, and OAuth.</p>
           <div className="project-link-ctnr">
@@ -238,7 +238,7 @@ class App extends React.Component {
       <div className="w3-half">
         <div className="project-card">
           <h5>Experiences</h5>
-          <img src="https://i.imgur.com/oWaG0jA.png" alt='experiences' style={{ width: '100%' }} />
+          <img src="https://i.imgur.com/oWaG0jA.png" alt='experiences' className="project-img" />
           <p>For SEI Project 3, I worked with 2 other dev students to create a marketplace app for local experiences or activities.</p>
           <p>The main technologies used for this project were: Python, Django, PostgreSQL, and Bootstrap.</p>
           <div className="project-link-ctnr">
@@ -252,7 +252,7 @@ class App extends React.Component {
         </div>
         <div className="project-card">
           <h5>protestNOW</h5>
-          <img src="https://i.imgur.com/eb1Bzgb.png" alt='protestnow' style={{ width: '100%' }} />
+          <img src="https://i.imgur.com/eb1Bzgb.png" alt='protestnow' className="project-img" />
           <p>For SEI Project 4, I created an app where protestors could share their stories with others.</p>
           <p>The main technologies used for this project were: React, Node, Express, MongoDB, and JSON Web Token authentication.</p>
           <div className="project-link-ctnr">
@@ -298,7 +298,7 @@ class App extends React.Component {
   
     {/* <!-- Footer --> */}
   <footer className="w3-content w3-padding-32 w3-text-grey w3-xlarge">
-    <div className='w3-col w3-margin-bottom'>
+    <div className='w3-col w3-margin-bottom footer-link-ctnr'>
       <div className='w3-third w3-center'>
         <a target='_blank' rel="noopener noreferrer" href='https://github.com/g-merrill/'>
           <i className="fa fa-github w3-hover-opacity w3-jumbo" />
@@ -310,7 +310,7 @@ class App extends React.Component {
         </a>
       </div>
       <div className='w3-third w3-center'>
-        <a target='_blank' rel="noopener noreferrer" href='https://profiles.generalassemb.ly/profiles'>
+        <a target='_blank' rel="noopener noreferrer" href='https://profiles.generalassemb.ly/profiles/g-merrill'>
           <i className="fa fa-certificate w3-hover-opacity w3-jumbo" />
         </a>
       </div>
