@@ -114,7 +114,7 @@ class App extends React.Component {
     <h2 className="w3-text-light-grey">My Skills</h2>
     <hr style={{ width: '200px', paddingBottom: '32px' }} className="w3-opacity" />
     <ul className="w3-wide w3-ul">
-      <h5>Languages and Frameworks</h5>
+      <h5 className="w3-col w3-text-gray">Languages and Frameworks</h5>
       <div className="w3-third">
         <li className="w3-li gray-bord-bot"></li>
         <li className="w3-li w3-text-white gray-bord-bot">JavaScript</li>
@@ -138,7 +138,7 @@ class App extends React.Component {
       </div>
     </ul>
     <ul className="w3-wide w3-ul">
-      <h5 className="w3-col">Server-Side and Database</h5>
+      <h5 className="w3-col w3-text-gray">Server-Side and Database</h5>
       <div className="w3-half">
         <li className="w3-li gray-bord-bot"></li>
         <li className="w3-li w3-text-white gray-bord-bot">Express</li>
@@ -157,7 +157,7 @@ class App extends React.Component {
       </div>
     </ul>
     <ul className="w3-wide w3-ul">
-      <h5 className="w3-col">Version Control and Workflow Management</h5>
+      <h5 className="w3-col w3-text-gray">Version Control and Workflow Management</h5>
       <div className="w3-half">
         <li className="w3-li gray-bord-bot"></li>
         <li className="w3-li w3-text-white gray-bord-bot">Git</li>
@@ -174,7 +174,7 @@ class App extends React.Component {
       </div>
     </ul>
     <ul className="w3-wide w3-ul">
-      <h5 className="w3-col">Methodologies</h5>
+      <h5 className="w3-col w3-text-gray">Methodologies</h5>
       <div className="w3-half">
         <li className="w3-li gray-bord-bot"></li>
         <li className="w3-li w3-text-white gray-bord-bot">ERDs</li>
