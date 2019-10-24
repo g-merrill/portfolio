@@ -52,9 +52,28 @@ body, h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid rgba(117, 117, 117, 1) !important;
 }
 
-/* .gray-bord-bot:first-child {
-  border: 1px solid transparent !important;
-} */
 .gray-bord-bot:last-child {
   border: 1px solid transparent !important;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 540px;
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
+  background: rgba(10, 10, 10, 1);
+  margin: 0 0 20px;
+}
+
+.project-card:hover {
+  opacity: 1;
+}
+
+.project-link-ctnr {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 10px 0;
 }

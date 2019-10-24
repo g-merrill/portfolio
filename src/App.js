@@ -53,6 +53,10 @@ class App extends React.Component {
     <i className="fa fa-user w3-xxlarge"></i>
     <p>ABOUT</p>
   </a>
+  <a href="#skills" className="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i className="fa fa-code w3-xxlarge"></i>
+    <p>SKILLS</p>
+  </a>
   <a href="#projects" className="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i className="fa fa-eye w3-xxlarge"></i>
     <p>PROJECTS</p>
@@ -68,6 +72,7 @@ class App extends React.Component {
   <div className="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
     <a href="/portfolio" className="w3-bar-item w3-button" style={{ width: '25% !important' }}>HOME</a>
     <a href="#about" className="w3-bar-item w3-button" style={{ width: '25% !important' }}>ABOUT</a>
+    <a href="#skills" className="w3-bar-item w3-button" style={{ width: '25% !important' }}>SKILLS</a>
     <a href="#projects" className="w3-bar-item w3-button" style={{ width: '25% !important' }}>PROJECTS</a>
     <a href="#contact" className="w3-bar-item w3-button" style={{ width: '25% !important' }}>CONTACT</a>
   </div>
@@ -104,7 +109,10 @@ class App extends React.Component {
       In terms of my current interests: my favorite languages are JavaScript (so versatile) and Python (so clean), 
       and I'm really enjoying the scalability and reusable components of React!
     </p>
-    <h3 className="w3-padding-16 w3-text-light-grey">My Skills</h3>
+  </div>
+  <div className="w3-padding-64 w3-content" id="skills">
+    <h2 className="w3-text-light-grey">My Skills</h2>
+    <hr style={{ width: '200px', paddingBottom: '32px' }} className="w3-opacity" />
     <ul className="w3-wide w3-ul">
       <h5>Languages and Frameworks</h5>
       <div className="w3-third">
@@ -198,51 +206,55 @@ class App extends React.Component {
     {/* Use Screenshots from the projects as clickable links to project details */}
     <div className="w3-row-padding" style={{ margin: '0 -16px' }}>
       <div className="w3-half">
-        <div style={{ height: '200px !important' }}>
-          <a target='_blank' rel='noopener noreferrer' href='https://g-merrill.github.io/minesweeper/'>
-            <img src="https://i.imgur.com/2TPxzNq.png" alt='minesweeper' style={{ width: '100%' }} />
-          </a>
-          <div className='w3-center'>
+        <div className="project-card">
+          <h5>Minesweeper</h5>
+          <img src="https://i.imgur.com/2TPxzNq.png" alt='minesweeper' style={{ width: '100%' }} />
+          <div className="project-link-ctnr">
+            <a target='_blank' rel='noopener noreferrer' href='https://g-merrill.github.io/minesweeper/'>
+              <i className="fa fa-external-link w3-hover-opacity w3-xxlarge" />
+            </a>
             <a target='_blank' rel="noopener noreferrer" href='https://github.com/g-merrill/minesweeper'>
               <i className="fa fa-github w3-hover-opacity w3-xxlarge" />
             </a>
           </div>
         </div>
-        <div style={{ height: '200px' }}>
-          <a target='_blank' rel='noopener noreferrer' href='https://trucksfinder.herokuapp.com/'>
-            <img src="https://i.imgur.com/v5ZeNkw.png" alt='trucksfinder' style={{ width: '100%' }} />
-          </a>
-          <div className='w3-center'>
+        <div className="project-card">
+          <h5>truckSFinder</h5>
+          <img src="https://i.imgur.com/v5ZeNkw.png" alt='trucksfinder' style={{ width: '100%' }} />
+          <div className="project-link-ctnr">
+            <a target='_blank' rel='noopener noreferrer' href='https://trucksfinder.herokuapp.com/'>
+              <i className="fa fa-external-link w3-hover-opacity w3-xxlarge" />
+            </a>
             <a target='_blank' rel="noopener noreferrer" href='https://github.com/g-merrill/truckSFinder'>
               <i className="fa fa-github w3-hover-opacity w3-xxlarge" />
             </a>
           </div>
         </div>
-
       </div>
-
       <div className="w3-half">
-        <a target='_blank' rel='noopener noreferrer' href='https://experiencesapp.herokuapp.com/'>
+        <div className="project-card">
+          <h5>Experiences</h5>
           <img src="https://i.imgur.com/oWaG0jA.png" alt='experiences' style={{ width: '100%' }} />
-        </a>
-        <div className='w3-center'>
-          <a target='_blank' rel="noopener noreferrer" href='https://github.com/g-merrill/experiences-app'>
-            <i className="fa fa-github w3-hover-opacity w3-xxlarge" />
-          </a>
+          <div className="project-link-ctnr">
+            <a target='_blank' rel='noopener noreferrer' href='https://experiencesapp.herokuapp.com/'>
+              <i className="fa fa-external-link w3-hover-opacity w3-xxlarge" />
+            </a>
+            <a target='_blank' rel="noopener noreferrer" href='https://github.com/g-merrill/experiences-app'>
+              <i className="fa fa-github w3-hover-opacity w3-xxlarge" />
+            </a>
+          </div>
         </div>
-        <div className='w3-col'>
-          &nbsp;
-        </div>
-        <a target='_blank' rel='noopener noreferrer' href='https://protest-now.herokuapp.com/'>
+        <div className="project-card">
+          <h5>protestNOW</h5>
           <img src="https://i.imgur.com/eb1Bzgb.png" alt='protestnow' style={{ width: '100%' }} />
-        </a>
-        <div className='w3-center'>
-          <a target='_blank' rel="noopener noreferrer" href='https://github.com/g-merrill/protestNOW'>
-            <i className="fa fa-github w3-hover-opacity w3-xxlarge" />
-          </a>
-        </div>
-        <div className='w3-col'>
-          &nbsp;
+          <div className="project-link-ctnr">
+            <a target='_blank' rel='noopener noreferrer' href='https://protest-now.herokuapp.com/'>
+              <i className="fa fa-external-link w3-hover-opacity w3-xxlarge" />
+            </a>
+            <a target='_blank' rel="noopener noreferrer" href='https://github.com/g-merrill/protestNOW'>
+              <i className="fa fa-github w3-hover-opacity w3-xxlarge" />
+            </a>
+          </div>
         </div>
       </div>
     {/* <!-- End project grid --> */}
