@@ -209,8 +209,8 @@ class App extends React.Component {
         <div className="project-card">
           <h5>Minesweeper</h5>
           <img src="https://i.imgur.com/2TPxzNq.png" alt='minesweeper' className="project-img" />
-          <p>For SEI Project 1, I built my own version of the classic game, Minesweeper.</p>
-          <p>The main technologies used for this project were: HTML, CSS, and JavaScript.</p>
+          <p className="project-description">For SEI Project 1, I built my own version of the classic game, Minesweeper.</p>
+          <p className="project-description">The main technologies used for this project were: HTML, CSS, and JavaScript.</p>
           <div className="project-link-ctnr">
             <a target='_blank' rel='noopener noreferrer' href='https://g-merrill.github.io/minesweeper/'>
               <i className="fa fa-external-link w3-hover-opacity w3-xxlarge" />
@@ -223,8 +223,8 @@ class App extends React.Component {
         <div className="project-card">
           <h5>truckSFinder</h5>
           <img src="https://i.imgur.com/v5ZeNkw.png" alt='trucksfinder' className="project-img" />
-          <p>For SEI Project 2, I collaborated with a UX design student to make an app focused on finding and reviewing local SF food trucks.</p>
-          <p>The main technologies used for this project were: Node, Express, EJS, MongoDB, Mongoose, and OAuth.</p>
+          <p className="project-description">For SEI Project 2, I collaborated with a UX design student to make an app focused on finding and reviewing local SF food trucks.</p>
+          <p className="project-description">The main technologies used for this project were: Node, Express, EJS, MongoDB, Mongoose, and OAuth.</p>
           <div className="project-link-ctnr">
             <a target='_blank' rel='noopener noreferrer' href='https://trucksfinder.herokuapp.com/'>
               <i className="fa fa-external-link w3-hover-opacity w3-xxlarge" />
@@ -239,8 +239,8 @@ class App extends React.Component {
         <div className="project-card">
           <h5>Experiences</h5>
           <img src="https://i.imgur.com/oWaG0jA.png" alt='experiences' className="project-img" />
-          <p>For SEI Project 3, I worked with 2 other dev students to create a marketplace app for local experiences or activities.</p>
-          <p>The main technologies used for this project were: Python, Django, PostgreSQL, and Bootstrap.</p>
+          <p className="project-description">For SEI Project 3, I worked with 2 other dev students to create a marketplace app for local experiences or activities.</p>
+          <p className="project-description">The main technologies used for this project were: Python, Django, PostgreSQL, and Bootstrap.</p>
           <div className="project-link-ctnr">
             <a target='_blank' rel='noopener noreferrer' href='https://experiencesapp.herokuapp.com/'>
               <i className="fa fa-external-link w3-hover-opacity w3-xxlarge" />
@@ -253,8 +253,8 @@ class App extends React.Component {
         <div className="project-card">
           <h5>protestNOW</h5>
           <img src="https://i.imgur.com/eb1Bzgb.png" alt='protestnow' className="project-img" />
-          <p>For SEI Project 4, I created an app where protestors could share their stories with others.</p>
-          <p>The main technologies used for this project were: React, Node, Express, MongoDB, and JSON Web Token authentication.</p>
+          <p className="project-description">For SEI Project 4, I created an app where protestors could share their stories with others.</p>
+          <p className="project-description">The main technologies used for this project were: React, Node, Express, MongoDB, and JSON Web Token authentication.</p>
           <div className="project-link-ctnr">
             <a target='_blank' rel='noopener noreferrer' href='https://protest-now.herokuapp.com/'>
               <i className="fa fa-external-link w3-hover-opacity w3-xxlarge" />
@@ -315,7 +315,6 @@ class App extends React.Component {
         </a>
       </div>
     </div>
-    <p className="w3-medium w3-margin-top w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" rel='noopener noreferrer' className="w3-hover-text-green">w3.css</a></p>
   {/* <!-- End footer --> */}
   </footer>
 

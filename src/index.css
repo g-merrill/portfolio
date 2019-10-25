@@ -85,7 +85,7 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 .project-img {
-  max-width: 100%;
+  max-width: 90%;
   max-height: 400px;
 }
 
@@ -96,4 +96,8 @@ body, h1, h2, h3, h4, h5, h6 {
   border: none;
   display: block;
   outline: 0;
+}
+
+.project-description {
+  width: 90%;
 }
