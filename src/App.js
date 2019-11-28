@@ -297,8 +297,8 @@ class App extends React.Component {
   </div>
   
     {/* <!-- Footer --> */}
-  <footer className="w3-content w3-padding-32 w3-text-grey w3-xlarge">
-    <div className='w3-col w3-margin-bottom footer-link-ctnr'>
+  <footer className="w3-content w3-text-grey w3-xlarge">
+    <div className='w3-col footer-link-ctnr'>
       <div className='w3-third w3-center'>
         <a target='_blank' rel="noopener noreferrer" href='https://github.com/g-merrill/'>
           <i className="fa fa-github w3-hover-opacity w3-jumbo" />
