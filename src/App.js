@@ -58,7 +58,7 @@ class App extends React.Component {
     if (!targetAnchor) return;
     const originalTop = distanceToTop(targetAnchor);
     originalTop > 0 ?
-    window.scrollBy({ top: originalTop - 64, left: 0, behavior: 'smooth' }) :
+    window.scrollBy({ top: originalTop - 100, left: 0, behavior: 'smooth' }) :
     window.scrollBy({ top: originalTop, left: 0, behavior: 'smooth' });
     const checkIfDone = setInterval(function() {
       const atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
