@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './App.css';
 
 class App extends React.Component {
@@ -11,6 +13,16 @@ class App extends React.Component {
     message: ''
   };
 
+  setActiveTab = evt => {
+    evt.preventDefault();
+    let navBtns = document.querySelectorAll('.nav-btn');
+    navBtns.forEach(navBtn => navBtn.classList.remove('active-tab'));
+    if (evt.target.tagName === 'A') {
+      evt.target.classList.toggle('active-tab');
+    } else {
+      evt.target.parentElement.classList.toggle('active-tab');
+    }
+  }
 
   handleChange = evt => {
     this.setState({
@@ -38,6 +50,37 @@ class App extends React.Component {
     .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err));
   }
 
+  scrollAnchors (e, respond = null) {
+    const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
+    e.preventDefault();
+    var targetID = (respond) ? respond.getAttribute('href') : this.getAttribute('href');
+    const targetAnchor = document.querySelector(targetID);
+    if (!targetAnchor) return;
+    const originalTop = distanceToTop(targetAnchor);
+    console.log(originalTop);
+    originalTop > 0 ? 
+    window.scrollBy({ top: originalTop - 100, left: 0, behavior: 'smooth' }) : 
+    window.scrollBy({ top: originalTop, left: 0, behavior: 'smooth' });
+    const checkIfDone = setInterval(function() {
+      const atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
+      if (distanceToTop(targetAnchor) === 0 || atBottom) {
+        targetAnchor.tabIndex = '-1';
+        window.history.pushState('', '', targetID);
+        clearInterval(checkIfDone);
+      }
+    }, 100);
+  }
+
+  scrollTo() {
+    const links = document.querySelectorAll('.nav-btn');
+    links.forEach(each => (each.onclick = this.scrollAnchors));
+  }
+
+  componentDidMount() {
+    this.scrollTo();
+    AOS.init({ duration: 800, mirror: true });
+  }
+
   render() {
     return (
       <>
@@ -45,23 +88,23 @@ class App extends React.Component {
 <nav className="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   {/* <!-- Avatar image in top left corner --> */}
   <img src="https://i.imgur.com/Sj59xHV.jpg" alt="smoke" style={{ width: '100%' }} />
-  <a href="/portfolio" className="w3-bar-item w3-button w3-padding-large w3-black">
+  <a onClick={this.setActiveTab} href="#home" className="nav-btn web-nav-btn active-tab w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i className="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
-  <a href="#about" className="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a onClick={this.setActiveTab} href="#about" className="nav-btn web-nav-btn w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i className="fa fa-user w3-xxlarge"></i>
     <p>ABOUT</p>
   </a>
-  <a href="#skills" className="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a onClick={this.setActiveTab} href="#skills" className="nav-btn web-nav-btn w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i className="fa fa-code w3-xxlarge"></i>
     <p>SKILLS</p>
   </a>
-  <a href="#projects" className="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a onClick={this.setActiveTab} href="#projects" className="nav-btn web-nav-btn w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i className="fa fa-eye w3-xxlarge"></i>
     <p>PROJECTS</p>
   </a>
-  <a href="#contact" className="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a onClick={this.setActiveTab} href="#contact" className="nav-btn web-nav-btn w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i className="fa fa-envelope w3-xxlarge"></i>
     <p>CONTACT</p>
   </a>
@@ -70,25 +113,25 @@ class App extends React.Component {
 {/* <!-- Navbar on small screens (Hidden on medium and large screens) --> */}
 <div className="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
   <div className="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="/portfolio" className="w3-button mobile-nav-btn" style={{ width: '25% !important' }}>HOME</a>
-    <a href="#about" className="w3-button mobile-nav-btn" style={{ width: '25% !important' }}>ABOUT</a>
-    <a href="#skills" className="w3-button mobile-nav-btn" style={{ width: '25% !important' }}>SKILLS</a>
-    <a href="#projects" className="w3-button mobile-nav-btn" style={{ width: '25% !important' }}>PROJECTS</a>
-    <a href="#contact" className="w3-button mobile-nav-btn" style={{ width: '25% !important' }}>CONTACT</a>
+    <a onClick={this.setActiveTab} href="#home" className="nav-btn active-tab mobile-nav-btn w3-button" style={{ width: '25% !important' }}>HOME</a>
+    <a onClick={this.setActiveTab} href="#about" className="nav-btn mobile-nav-btn w3-button" style={{ width: '25% !important' }}>ABOUT</a>
+    <a onClick={this.setActiveTab} href="#skills" className="nav-btn mobile-nav-btn w3-button" style={{ width: '25% !important' }}>SKILLS</a>
+    <a onClick={this.setActiveTab} href="#projects" className="nav-btn mobile-nav-btn w3-button" style={{ width: '25% !important' }}>PROJECTS</a>
+    <a onClick={this.setActiveTab} href="#contact" className="nav-btn mobile-nav-btn w3-button" style={{ width: '25% !important' }}>CONTACT</a>
   </div>
 </div>
 
 {/* <!-- Page Content --> */}
 <div className="w3-padding-large" id="main">
   {/* <!-- Header/Home --> */}
-  <header className="w3-container w3-padding-32 w3-center w3-black" id="home">
+  <header className="w3-container w3-padding-32 w3-center w3-black focus-off" id="home">
     <h1 className="w3-jumbo"><span className="w3-hide-small">I'm</span> Greg Merrill</h1>
     <p>Software Engineer</p>
     <img src="https://i.imgur.com/UN2oD55.jpg" alt="boy" className="w3-image" style={{ width: '400px' }} />
   </header>
 
   {/* <!-- About Section --> */}
-  <div className="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+  <div className="w3-content w3-justify w3-text-grey w3-padding-64 focus-off" id="about" data-aos="fade-up" data-aos-anchor-placement="top-center">
     <h2 className="w3-text-light-grey">About Me</h2>
     <hr style={{ width: '200px' }} className="w3-opacity" />
     <p>
@@ -110,7 +153,7 @@ class App extends React.Component {
       and I'm really enjoying the scalability and reusable components of React!
     </p>
   </div>
-  <div className="w3-padding-64 w3-content" id="skills">
+  <div className="w3-padding-64 w3-content focus-off" id="skills" data-aos="fade-up" data-aos-anchor-placement="top-center">
     <h2 className="w3-text-light-grey">My Skills</h2>
     <hr style={{ width: '200px', paddingBottom: '32px' }} className="w3-opacity" />
     <ul className="w3-wide w3-ul">
@@ -198,7 +241,7 @@ class App extends React.Component {
   </div>
   
   {/* <!-- Portfolio Section --> */}
-  <div className="w3-padding-64 w3-content" id="projects">
+  <div className="w3-padding-64 w3-content focus-off" id="projects" data-aos="fade-up" data-aos-anchor-placement="top-center">
     <h2 className="w3-text-light-grey">My Projects</h2>
     <hr style={{ width: '200px' }} className="w3-opacity" />
 
@@ -213,10 +256,10 @@ class App extends React.Component {
           <p className="project-description">The main technologies used for this project were: HTML, CSS, and JavaScript.</p>
           <div className="project-link-ctnr">
             <a target='_blank' rel='noopener noreferrer' href='https://g-merrill.github.io/minesweeper/'>
-              <i className="fa fa-external-link w3-hover-opacity w3-xxlarge" />
+              <i className="fa fa-external-link w3-xxlarge icon-hover" />
             </a>
             <a target='_blank' rel="noopener noreferrer" href='https://github.com/g-merrill/minesweeper'>
-              <i className="fa fa-github w3-hover-opacity w3-xxlarge" />
+              <i className="fa fa-github w3-xxlarge icon-hover" />
             </a>
           </div>
         </div>
@@ -227,10 +270,10 @@ class App extends React.Component {
           <p className="project-description">The main technologies used for this project were: Node, Express, EJS, MongoDB, Mongoose, and OAuth.</p>
           <div className="project-link-ctnr">
             <a target='_blank' rel='noopener noreferrer' href='https://trucksfinder.herokuapp.com/'>
-              <i className="fa fa-external-link w3-hover-opacity w3-xxlarge" />
+              <i className="fa fa-external-link w3-xxlarge icon-hover" />
             </a>
             <a target='_blank' rel="noopener noreferrer" href='https://github.com/g-merrill/truckSFinder'>
-              <i className="fa fa-github w3-hover-opacity w3-xxlarge" />
+              <i className="fa fa-github w3-xxlarge icon-hover" />
             </a>
           </div>
         </div>
@@ -243,10 +286,10 @@ class App extends React.Component {
           <p className="project-description">The main technologies used for this project were: Python, Django, PostgreSQL, and Bootstrap.</p>
           <div className="project-link-ctnr">
             <a target='_blank' rel='noopener noreferrer' href='https://experiencesapp.herokuapp.com/'>
-              <i className="fa fa-external-link w3-hover-opacity w3-xxlarge" />
+              <i className="fa fa-external-link w3-xxlarge icon-hover" />
             </a>
             <a target='_blank' rel="noopener noreferrer" href='https://github.com/g-merrill/experiences-app'>
-              <i className="fa fa-github w3-hover-opacity w3-xxlarge" />
+              <i className="fa fa-github w3-xxlarge icon-hover" />
             </a>
           </div>
         </div>
@@ -257,10 +300,10 @@ class App extends React.Component {
           <p className="project-description">The main technologies used for this project were: React, Node, Express, MongoDB, and JSON Web Token authentication.</p>
           <div className="project-link-ctnr">
             <a target='_blank' rel='noopener noreferrer' href='https://protest-now.herokuapp.com/'>
-              <i className="fa fa-external-link w3-hover-opacity w3-xxlarge" />
+              <i className="fa fa-external-link w3-xxlarge icon-hover" />
             </a>
             <a target='_blank' rel="noopener noreferrer" href='https://github.com/g-merrill/protestNOW'>
-              <i className="fa fa-github w3-hover-opacity w3-xxlarge" />
+              <i className="fa fa-github w3-xxlarge icon-hover" />
             </a>
           </div>
         </div>
@@ -271,7 +314,7 @@ class App extends React.Component {
   </div>
 
   {/* <!-- Contact Section --> */}
-  <div className="w3-padding-64 w3-content w3-text-grey" id="contact">
+  <div className="w3-padding-64 w3-content w3-text-grey focus-off" id="contact" data-aos="fade-up" data-aos-anchor-placement="top-center">
     <h2 className="w3-text-light-grey">Contact Me</h2>
     <hr style={{ width: '200px' }} className="w3-opacity" />
 
@@ -301,17 +344,17 @@ class App extends React.Component {
     <div className='w3-col footer-link-ctnr'>
       <div className='w3-third w3-center'>
         <a target='_blank' rel="noopener noreferrer" href='https://github.com/g-merrill/'>
-          <i className="fa fa-github w3-hover-opacity w3-jumbo" />
+          <i className="fa fa-github w3-jumbo icon-hover footer-icon" />
         </a>
       </div>
       <div className='w3-third w3-center'>
         <a target='_blank' rel="noopener noreferrer" href='https://www.linkedin.com/in/g-merrill/'>
-          <i className="fa fa-linkedin w3-hover-opacity w3-jumbo" />
+          <i className="fa fa-linkedin w3-jumbo icon-hover footer-icon" />
         </a>
       </div>
       <div className='w3-third w3-center'>
         <a target='_blank' rel="noopener noreferrer" href='https://profiles.generalassemb.ly/profiles/g-merrill'>
-          <i className="fa fa-certificate w3-hover-opacity w3-jumbo" />
+          <i className="fa fa-certificate w3-jumbo icon-hover footer-icon" />
         </a>
       </div>
     </div>
