@@ -57,7 +57,6 @@ class App extends React.Component {
     const targetAnchor = document.querySelector(targetID);
     if (!targetAnchor) return;
     const originalTop = distanceToTop(targetAnchor);
-    console.log(originalTop);
     originalTop > 0 ? 
     window.scrollBy({ top: originalTop - 100, left: 0, behavior: 'smooth' }) : 
     window.scrollBy({ top: originalTop, left: 0, behavior: 'smooth' });
@@ -318,14 +317,14 @@ class App extends React.Component {
     <h2 className="w3-text-light-grey">Contact Me</h2>
     <hr style={{ width: '200px' }} className="w3-opacity" />
 
-    <div className="w3-section">
+    <div className="w3-section" data-aos="fade-up" data-aos-anchor-placement="bottom">
       <p><i className="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> San Francisco, US</p>
       <p><i className="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: &nbsp; 510 210 7036</p>
       <p><i className="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: &nbsp; gmerrill03@gmail.com</p>
-    </div><br/>
-    <p>Lets get in touch. Send me a message:</p>
-
-    <form onSubmit={this.handleSubmit}>
+    </div>
+    <br/>
+    <p data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-delay="300">Lets get in touch. Send me a message:</p>
+    <form onSubmit={this.handleSubmit} data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-delay="300">
       <p><input className="w3-input w3-padding-16" type="text" placeholder="Name" required id="name" name="name" onChange={this.handleChange} /></p>
       <p><input className="w3-input w3-padding-16" type="text" placeholder="Email" required id="email" name="email" onChange={this.handleChange} /></p>
       <p><input className="w3-input w3-padding-16" type="text" placeholder="Subject" required id="subject" name="subject" onChange={this.handleChange} /></p>
