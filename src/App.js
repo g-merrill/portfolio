@@ -157,22 +157,22 @@ class App extends React.Component {
     <h2 className="w3-text-light-grey">My Skills</h2>
     <hr style={{ width: '200px', paddingBottom: '32px' }} className="w3-opacity" />
     <ul className="w3-wide w3-ul">
-      <h5 className="w3-col w3-text-gray">Languages and Frameworks</h5>
-      <div className="w3-third">
+      <h5 className="w3-col w3-text-gray" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Languages and Frameworks</h5>
+      <div className="w3-third" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
         <li className="w3-li gray-bord-bot"></li>
         <li className="w3-li w3-text-white gray-bord-bot">JavaScript</li>
         <li className="w3-li w3-text-white gray-bord-bot">React</li>
         <li className="w3-li w3-text-white add-bord-bot">Python 3</li>
         <li className="w3-li hide-li"></li>
       </div>
-      <div className="w3-third">
+      <div className="w3-third" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="300">
         <li className="w3-li gray-bord-bot hide-li"></li>
         <li className="w3-li w3-text-white add-bord-bot">Node.js</li>
         <li className="w3-li w3-text-white gray-bord-bot">HTML5</li>
         <li className="w3-li w3-text-white gray-bord-bot">CSS3</li>
         <li className="w3-li hide-li"></li>
       </div>
-      <div className="w3-third">
+      <div className="w3-third" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="600">
         <li className="w3-li gray-bord-bot hide-li"></li>
         <li className="w3-li w3-text-white gray-bord-bot">Bootstrap</li>
         <li className="w3-li w3-text-white gray-bord-bot">Materialize</li>
@@ -181,8 +181,8 @@ class App extends React.Component {
       </div>
     </ul>
     <ul className="w3-wide w3-ul">
-      <h5 className="w3-col w3-text-gray">Server-Side and Database</h5>
-      <div className="w3-half">
+      <h5 className="w3-col w3-text-gray" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Server-Side and Database</h5>
+      <div className="w3-half" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
         <li className="w3-li gray-bord-bot"></li>
         <li className="w3-li w3-text-white gray-bord-bot">Express</li>
         <li className="w3-li w3-text-white gray-bord-bot">PostgreSQL</li>
@@ -190,7 +190,7 @@ class App extends React.Component {
         <li className="w3-li w3-text-white add-bord-bot">MongoDB</li>
         <li className="w3-li hide-li"></li>
       </div>
-      <div className="w3-half">
+      <div className="w3-half" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="300">
         <li className="w3-li gray-bord-bot hide-li"></li>
         <li className="w3-li w3-text-white gray-bord-bot">OAuth</li>
         <li className="w3-li w3-text-white gray-bord-bot">Passport</li>
@@ -200,15 +200,15 @@ class App extends React.Component {
       </div>
     </ul>
     <ul className="w3-wide w3-ul">
-      <h5 className="w3-col w3-text-gray">Version Control and Workflow Management</h5>
-      <div className="w3-half">
+      <h5 className="w3-col w3-text-gray" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Version Control and Workflow Management</h5>
+      <div className="w3-half" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
         <li className="w3-li gray-bord-bot"></li>
         <li className="w3-li w3-text-white gray-bord-bot">Git</li>
         <li className="w3-li w3-text-white gray-bord-bot">GitHub</li>
         <li className="w3-li w3-text-white add-bord-bot">Command Line</li>
         <li className="w3-li hide-li"></li>
       </div>
-      <div className="w3-half">
+      <div className="w3-half" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="300">
         <li className="w3-li gray-bord-bot hide-li"></li>
         <li className="w3-li w3-text-white gray-bord-bot">Trello</li>
         <li className="w3-li w3-text-white gray-bord-bot">InVision</li>
@@ -217,23 +217,23 @@ class App extends React.Component {
       </div>
     </ul>
     <ul className="w3-wide w3-ul">
-      <h5 className="w3-col w3-text-gray">Methodologies</h5>
-      <div className="w3-half">
+      <h5 className="w3-col w3-text-gray" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Methodologies</h5>
+      <div className="w3-half" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
         <li className="w3-li gray-bord-bot"></li>
         <li className="w3-li w3-text-white gray-bord-bot">ERDs</li>
         <li className="w3-li w3-text-white gray-bord-bot">MVC Pattern</li>
         <li className="w3-li w3-text-white mobile-bord-bot">Object-Oriented Programming</li>
       </div>
-      <div className="w3-half">
+      <div className="w3-half" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="300">
         <li className="w3-li gray-bord-bot hide-li"></li>
         <li className="w3-li w3-text-white gray-bord-bot">Wireframing</li>
         <li className="w3-li w3-text-white gray-bord-bot">User Stories</li>
         <li className="w3-li w3-text-white gray-bord-bot">Responsive Design</li>
       </div>
     </ul>
-    <div className='w3-col add-bord-top' />
+    <div className='w3-col add-bord-top' data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"/>
     <div className='w3-bar-block'></div>
-    <button className="w3-button w3-light-grey w3-padding-large  w3-section">
+    <button className="w3-button w3-light-grey w3-padding-large  w3-section" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
       <i className="fa fa-download" />
       &nbsp;
       <Link to="/portfolio/files/Gregory_Merrill_Resume.pdf" target="_blank" download>Download Resume</Link>
@@ -249,7 +249,7 @@ class App extends React.Component {
     {/* Use Screenshots from the projects as clickable links to project details */}
     <div className="w3-row-padding" style={{ margin: '0 -16px' }}>
       <div className="w3-half">
-        <div className="project-card">
+        <div className="project-card" data-aos="fade-up" data-aos-anchor-placement="top-center">
           <h5>Minesweeper</h5>
           <img src="https://i.imgur.com/2TPxzNq.png" alt='minesweeper' className="project-img" />
           <p className="project-description">For SEI Project 1, I built my own version of the classic game, Minesweeper.</p>
@@ -263,7 +263,7 @@ class App extends React.Component {
             </a>
           </div>
         </div>
-        <div className="project-card">
+        <div className="project-card" data-aos="fade-up" data-aos-anchor-placement="top-center">
           <h5>truckSFinder</h5>
           <img src="https://i.imgur.com/v5ZeNkw.png" alt='trucksfinder' className="project-img" />
           <p className="project-description">For SEI Project 2, I collaborated with a UX design student to make an app focused on finding and reviewing local SF food trucks.</p>
@@ -279,7 +279,7 @@ class App extends React.Component {
         </div>
       </div>
       <div className="w3-half">
-        <div className="project-card">
+        <div className="project-card" data-aos="fade-up" data-aos-anchor-placement="top-center">
           <h5>Experiences</h5>
           <img src="https://i.imgur.com/oWaG0jA.png" alt='experiences' className="project-img" />
           <p className="project-description">For SEI Project 3, I worked with 2 other dev students to create a marketplace app for local experiences or activities.</p>
@@ -293,7 +293,7 @@ class App extends React.Component {
             </a>
           </div>
         </div>
-        <div className="project-card">
+        <div className="project-card" data-aos="fade-up" data-aos-anchor-placement="top-center">
           <h5>protestNOW</h5>
           <img src="https://i.imgur.com/eb1Bzgb.png" alt='protestnow' className="project-img" />
           <p className="project-description">For SEI Project 4, I created an app where protestors could share their stories with others.</p>
@@ -340,7 +340,7 @@ class App extends React.Component {
   </div>
   
     {/* <!-- Footer --> */}
-  <footer className="w3-content w3-text-grey w3-xlarge">
+  <footer className="w3-content w3-text-grey w3-xlarge" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
     <div className='w3-col footer-link-ctnr'>
       <div className='w3-third w3-center'>
         <a target='_blank' rel="noopener noreferrer" href='https://github.com/g-merrill/'>
