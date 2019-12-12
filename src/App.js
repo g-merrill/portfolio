@@ -60,13 +60,16 @@ class App extends React.Component {
     originalTop > 0 ?
     window.scrollBy({ top: originalTop - 100, left: 0, behavior: 'smooth' }) :
     window.scrollBy({ top: originalTop, left: 0, behavior: 'smooth' });
+    let distances = [distanceToTop(targetAnchor)];
     const checkIfDone = setInterval(function() {
       const atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
-      if (distanceToTop(targetAnchor) === 0 || atBottom) {
+      let newDistanceToTop = distanceToTop(targetAnchor);
+      if (newDistanceToTop === distances[0] || newDistanceToTop === 0 || atBottom) {
         targetAnchor.tabIndex = '-1';
         window.history.pushState('', '', targetID);
         clearInterval(checkIfDone);
       }
+      distances[0] = newDistanceToTop;
     }, 100);
   }
 
