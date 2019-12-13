@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './css/Skills.scss';
 
 const Skills = () => (
-  <div className="w3-padding-64 w3-content focus-off" id="skills" data-aos="fade-up" data-aos-anchor-placement="top-center">
+  <div className="w3-padding-64 w3-content focus-off Skills" id="skills" data-aos="fade-up" data-aos-anchor-placement="top-center">
     <h2 className="w3-text-light-grey">My Skills</h2>
     <hr style={{ width: '200px', paddingBottom: '32px' }} className="w3-opacity" />
     <ul className="w3-wide w3-ul">

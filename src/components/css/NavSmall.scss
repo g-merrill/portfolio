@@ -1,0 +1,16 @@
+.NavSmall {
+
+  .mobile-nav-btn {
+    padding: 5px 10px;
+    float: left;
+    width: auto;
+    border: none;
+    display: block;
+    outline: 0;
+  }
+
+  .mobile-nav-btn.active-tab {
+    background: white;
+    color: black;
+  }
+}

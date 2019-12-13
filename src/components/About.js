@@ -2,7 +2,7 @@ import React from 'react';
 import './css/About.scss';
 
 const About = () => (
-  <div className="w3-content w3-justify w3-text-grey w3-padding-64 focus-off" id="about" data-aos="fade-up" data-aos-anchor-placement="top-center">
+  <div className="w3-content w3-justify w3-text-grey w3-padding-64 focus-off About" id="about" data-aos="fade-up" data-aos-anchor-placement="top-center">
     <h2 className="w3-text-light-grey">About Me</h2>
     <hr style={{ width: '200px' }} className="w3-opacity" />
     <p>

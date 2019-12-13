@@ -1,0 +1,38 @@
+.App {
+
+  .focus-off:focus {
+    outline: 0;
+  }
+  /* Set the width of the sidebar to 120px */
+  .w3-sidebar {
+    width: 120px;
+    background: #222;
+  }
+  /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+  #main {
+    margin-left: 120px;
+  }
+
+  @media (max-width: 600px) {
+    /* Remove margins from "page content" on small screens */
+    #main {
+      margin-left: 0;
+    }
+  }
+  
+  .nav-btn {
+    transition: all 0.3s ease;
+  }
+  
+  .nav-btn:hover i {
+    color: rgb(98, 43, 226);
+  }
+  
+  .icon-hover {
+    transition: color 0.3s ease;
+  }
+  
+  .icon-hover:hover {
+    color: rgb(98, 43, 226);
+  }
+}

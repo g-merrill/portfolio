@@ -1,0 +1,30 @@
+.Skills {
+
+  @media (max-width: 600px) {
+
+    .hide-li {
+      display: none;
+    }
+    
+    .mobile-bord-bot {
+      border-bottom: 1px solid rgba(117, 117, 117, 1) !important; 
+    }
+  }
+
+  .add-bord-bot { 
+    border-bottom: 1px solid rgba(117, 117, 117, 1) !important; 
+  }
+  
+  .add-bord-top { 
+    border-top: 1px solid rgba(117, 117, 117, 1) !important; 
+    padding-top: 10px; 
+  }
+  
+  .gray-bord-bot {
+    border-bottom: 1px solid rgba(117, 117, 117, 1) !important;
+  }
+  
+  .gray-bord-bot:last-child {
+    border: 1px solid transparent !important;
+  }
+}

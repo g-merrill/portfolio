@@ -2,7 +2,7 @@ import React from 'react';
 import './css/Contact.scss';
 
 const Contact = ({ handleSubmit, handleChange }) => (
-  <div className="w3-padding-64 w3-content w3-text-grey focus-off" id="contact" data-aos="fade-up" data-aos-anchor-placement="top-center">
+  <div className="w3-padding-64 w3-content w3-text-grey focus-off Contact" id="contact" data-aos="fade-up" data-aos-anchor-placement="top-center">
     <h2 className="w3-text-light-grey">Contact Me</h2>
     <hr style={{ width: '200px' }} className="w3-opacity" />
 

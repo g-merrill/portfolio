@@ -2,7 +2,7 @@ import React from 'react';
 import './css/Footer.scss';
 
 const Footer = () => (
-  <footer className="w3-content w3-text-grey w3-xlarge" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
+  <footer className="w3-content w3-text-grey w3-xlarge Footer" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
     <div className='w3-col footer-link-ctnr'>
       <div className='w3-third w3-center'>
         <a target='_blank' rel="noopener noreferrer" href='https://github.com/g-merrill/'>

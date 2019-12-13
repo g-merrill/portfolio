@@ -2,7 +2,7 @@ import React from 'react';
 import './css/Projects.scss';
 
 const Projects = () => (
-  <div className="w3-padding-64 w3-content focus-off" id="projects" data-aos="fade-up" data-aos-anchor-placement="top-center">
+  <div className="w3-padding-64 w3-content focus-off Projects" id="projects" data-aos="fade-up" data-aos-anchor-placement="top-center">
     <h2 className="w3-text-light-grey">My Projects</h2>
     <hr style={{ width: '200px' }} className="w3-opacity" />
     {/* <!-- Grid for projects --> */}
