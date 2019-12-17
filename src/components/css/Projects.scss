@@ -26,10 +26,33 @@
   }
   
   .project-link-ctnr {
+    position: relative;
     margin-top: auto;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
     padding: 20px 0;
+  }
+
+  .already-here {
+    color: rgb(98, 43, 226);
+    position: absolute;
+    top: 10%;
+    left: 16%;
+    max-width: 33%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+    &:hover {
+      opacity: 1;
+      & + .pf-link {
+        opacity: 0;
+      }
+    }
+  }
+  .pf-link {
+    opacity: 1;
+    transition: all 0.3s ease;
   }
 }

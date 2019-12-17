@@ -71,6 +71,41 @@ const Projects = () => (
           </div>
         </div>
       </div>
+      <div className="w3-half">
+        <div className="project-card">
+          <h5 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" >Humans of New York API</h5>
+          <video className="project-img" data-aos="fade-up" data-aos-anchor-placement="center-bottom" alt='hony api' autoPlay loop>
+            <source type="video/mp4" src="https://thumbs.gfycat.com/RequiredIllfatedBoutu-mobile.mp4" />
+          </video>
+          <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" className="project-description">For my first post-GA project, I created an app where developers can search and access Humans of New York content based on a story's content, location, or date published.  The API provides a links to the hosted endpoint which returns the desired JSON data.</p>
+          <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" className="project-description">The main technologies used for this project were: React, Flask, Python, PostgreSQL, SQLAlchemy, and Heroku.</p>
+          <div className="project-link-ctnr">
+            <a target='_blank' rel='noopener noreferrer' href='https://hony.herokuapp.com/'>
+              <i className="fa fa-external-link w3-xxlarge icon-hover" />
+            </a>
+            <a target='_blank' rel="noopener noreferrer" href='https://github.com/g-merrill/hony'>
+              <i className="fa fa-github w3-xxlarge icon-hover" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="w3-half">
+        <div className="project-card">
+          <h5 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" >Personal Portfolio Site</h5>
+          <video className="project-img" data-aos="fade-up" data-aos-anchor-placement="center-bottom" alt='portfolio site' autoPlay loop>
+            <source type="video/mp4" src="https://thumbs.gfycat.com/VillainousActualIbadanmalimbe-mobile.mp4" />
+          </video>
+          <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" className="project-description">Meta right?  But I did in fact make this site from scratch too!</p>
+          <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" className="project-description">The main technologies used for this portfolio are: React, JavaScript, Sass, HTML5, and GitHub Pages</p>
+          <div className="project-link-ctnr">
+            <p className='already-here'>You're already here!</p>
+            <i className="fa fa-external-link w3-xxlarge pf-link" />
+            <a target='_blank' rel="noopener noreferrer" href='https://github.com/g-merrill/portfolio'>
+              <i className="fa fa-github w3-xxlarge icon-hover" />
+            </a>
+          </div>
+        </div>
+      </div>
     {/* <!-- End project grid --> */}
     </div>
   </div>
