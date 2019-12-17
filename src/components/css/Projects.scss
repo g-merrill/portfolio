@@ -37,9 +37,10 @@
   .already-here {
     color: rgb(98, 43, 226);
     position: absolute;
-    top: 10%;
+    align-self: center;
     left: 16%;
     max-width: 33%;
+    padding: 0 0 20px;
     text-align: center;
     opacity: 0;
     transition: opacity 0.3s ease;
