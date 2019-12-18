@@ -74,7 +74,7 @@ const Projects = () => (
       <div className="w3-half">
         <div className="project-card">
           <h5 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" >Humans of New York API</h5>
-          <video className="project-img" data-aos="fade-up" data-aos-anchor-placement="center-bottom" alt='hony api' autoPlay loop>
+          <video className="project-img" id='hony-vid' data-aos="fade-up" data-aos-anchor-placement="center-bottom" alt='hony api' autoPlay='autoplay' loop='loop' muted='muted'>
             <source type="video/mp4" src="https://thumbs.gfycat.com/RequiredIllfatedBoutu-mobile.mp4" />
           </video>
           <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" className="project-description">For my first post-GA project, I created an app where developers can search and access Humans of New York content based on a story's content, location, or date published.  The API provides a links to the hosted endpoint which returns the desired JSON data.</p>
@@ -92,7 +92,7 @@ const Projects = () => (
       <div className="w3-half">
         <div className="project-card">
           <h5 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" >Personal Portfolio Site</h5>
-          <video className="project-img" data-aos="fade-up" data-aos-anchor-placement="center-bottom" alt='portfolio site' autoPlay loop>
+          <video className="project-img" id='pf-vid' data-aos="fade-up" data-aos-anchor-placement="center-bottom" alt='portfolio site' autoPlay='autoplay' loop='loop' muted='muted'>
             <source type="video/mp4" src="https://thumbs.gfycat.com/VillainousActualIbadanmalimbe-mobile.mp4" />
           </video>
           <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" className="project-description">Meta right?  But I did in fact make this site from scratch too!</p>
