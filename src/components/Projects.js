@@ -77,7 +77,7 @@ const Projects = () => (
           <video className="project-img" id='hony-vid' data-aos="fade-up" data-aos-anchor-placement="center-bottom" alt='hony api' autoPlay='autoplay' loop='loop' muted='muted'>
             <source type="video/mp4" src="https://thumbs.gfycat.com/RequiredIllfatedBoutu-mobile.mp4" />
           </video>
-          <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" className="project-description">For my first post-GA project, I created an app where developers can search and access Humans of New York content based on a story's content, location, or date published.  The API provides a links to the hosted endpoint which returns the desired JSON data.</p>
+          <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" className="project-description">For my first post-GA project, I created an app where developers can search and access Humans of New York content based on a story's content, location, or date published.  The API provides a custom-built link to a hosted endpoint which returns pre-filtered JSON data.</p>
           <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" className="project-description">The main technologies used for this project were: React, Flask, Python, PostgreSQL, SQLAlchemy, and Heroku.</p>
           <div className="project-link-ctnr">
             <a target='_blank' rel='noopener noreferrer' href='https://hony.herokuapp.com/'>
